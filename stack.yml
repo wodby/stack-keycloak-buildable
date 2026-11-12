@@ -1,0 +1,26 @@
+name: keycloak-buildable
+title: Keycloak (buildable)
+icon: keycloak
+# A variant of the Keycloak stack: the catalog suggests them to each other.
+variantOf: keycloak
+variant: Buildable
+variantDescription: >-
+  Choose this when you want your own login and account themes or custom
+  providers: keep them in a Git repository, and Wodby builds Keycloak with them.
+
+services:
+- name: keycloak
+  title: Keycloak
+  service: keycloak-buildable
+  required: true
+  main: true
+  links:
+  - name: postgres
+    service: postgres
+- name: postgres
+  title: PostgreSQL
+  service: postgres
+  required: true
+  volumes:
+  - name: data
+    size: 20
