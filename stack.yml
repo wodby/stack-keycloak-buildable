@@ -1,6 +1,7 @@
 name: keycloak-buildable
 title: Keycloak (buildable)
 icon: keycloak
+docs: https://wodby.com/docs/2.0/stacks/catalog/keycloak-buildable/
 # A variant of the Keycloak stack: the catalog suggests them to each other.
 variantOf: keycloak
 variant: Buildable
